@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link href="./tailwind/output.css" rel="stylesheet">
+</head>
+
+<body class="place-items-center">
+  <div class="bg-sky-200 text-green-800 sm:py-10 py-6 w-full sm:bg-green-200 sm:text-blue-800">
+    <h1 class="text-center text-2xl font-bold">
+      <%= title %>
+    </h1>
+  </div>
+  <form method="post" action="/" class="w-full bg-pink-100 items-center flex sm:flex-row flex-col justify-around py-4">
+    <label for="shareName" class="text-green-800 text-xl px-4">Share Name:</label>
+    <input type="text" id="shareName" class="text-sm mr-3  py-4 px-4 border border-gray-400  rounded mb-2 uppercase text-center sm:text-left"
+      name="shareName" value="<%= sName %>">
+
+    <label for="startDate">Start Date :</label>
+    <input type="date" class="text-sm mr-3  py-4 px-4 border border-gray-400  rounded mb-2" id="startDate"
+      name="startDate" value="<%= startDate %>">
+
+    <label for="endDate">End Date :</label>
+    <input type="date" class="text-sm mr-3  py-4 px-4 border border-gray-400  rounded mb-2" id="endDate" name="endDate"
+      value="<%= endDate %>">
+
+    <button type="submit" class="bg-green-600 py-4 mb-2 hover:bg-green-700 hover:text-yellow-200 font-bold px-4 rounded-lg hover:rounded-full">
+      Get prices
+    </button>
+  </form>
+  <div class="w-full sm:bg-amber-200 bg-violet-200 flex sm:flex-row sm:justify-center sm:items-center flex-col justify-center py-4">
+    <p class="px-4 font-bold text-lg text-center sm:text-left">Share name: <%= lName %></p>
+    <p class="px-4 text-blue-900 font-semibold text-center sm:text-left">Current Market Price: <%= currentPrice %></p>
+    <p class="px-4 font-semibold text-center sm:text-left">Last Day Open: <%= lastDayOpen %></p>
+    <p class="px-4 font-semibold text-center sm:text-left">Last Day Close: <%= lastDayClose %></p>
+    <p class="px-4 text-green-800 font-semibold text-center sm:text-left">Last Day High: <%= lastDayHigh %></p>
+    <p class="px-4 text-red-900 font-semibold text-center sm:text-left">Last Day Low: <%= lastDayLow %></p>
+</div>
+
+</body>
+
+</html>
